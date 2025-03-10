@@ -1,8 +1,8 @@
 
 const items = [
-  { id: 1, name: "Laptop", description: "Used laptop.", price: "£150", image: "images/laptop.jpg" },
-  { id: 2, name: "Textbook", description: "CS Textbook.", price: "£30", image: "images/textbook.jpg" },
-  { id: 3, name: "Bicycle", description: "Second-hand bike.", price: "£100", image: "images/bicycle.jpg" },
+  { id: 1, name: "Laptop", description: "Used laptop.", price: "£150", image: "images/laptop.jfif" },
+  { id: 2, name: "Textbook", description: "CS Textbook.", price: "£30", image: "images/textbook.jfif" },
+  { id: 3, name: "Bicycle", description: "Second-hand bike.", price: "£100", image: "images/bicycle.jfif" },
   { id: 4, name: "Headphones", description: "Wireless headphones.", price: "£80", image: "images/headphones.jpg" }
 ];
 
