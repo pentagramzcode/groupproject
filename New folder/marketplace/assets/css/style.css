@@ -106,9 +106,11 @@ h2 {
 }
 
 .items-list {
-  display: block !important;
-  border: 2px solid red; /* Debugging border */
-  min-height: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+  padding: 20px 0;
 }
 
 .item-card {
