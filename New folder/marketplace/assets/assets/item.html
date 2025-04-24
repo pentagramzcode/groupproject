@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Marketplace</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="item-listing.html">Browse</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="item-detail">
+      <div id="item-details">
+        <p>Loading...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Marketplace. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+    const items = [
+      { id: 1, name: "Laptop", description: "Used laptop in good condition, perfect for students.", price: "£150", image: "images/laptop.jfif" },
+      { id: 2, name: "Textbook", description: "Computer Science textbook, essential for first-year students.", price: "£30", image: "images/textbook.jfif" },
+      { id: 3, name: "Bicycle", description: "Reliable second-hand bicycle, great for getting around campus.", price: "£100", image: "images/bicycle.jfif" },
+      { id: 4, name: "Headphones", description: "Wireless headphones with noise-cancellation feature.", price: "£80", image: "images/headphones.jpg" }
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const itemId = parseInt(params.get('id'));
+    const item = items.find(i => i.id === itemId);
+    const container = document.getElementById('item-details');
+
+    if (item && container) {
+      container.innerHTML = `
+        <h2>${item.name}</h2>
+        <img src="${item.image}" alt="${item.name}">
+        <div class="item-info">
+          <p class="item-price">${item.price}</p>
+          <p class="item-description">${item.description}</p>
+          <button class="btn btn-primary">Contact Seller</button>
+        </div>
+      `;
+    } else {
+      container.innerHTML = '<p>Item not found.</p>';
+    }
+  </script>
+</body>
+</html>
