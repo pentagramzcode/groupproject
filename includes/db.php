@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db = 'jm2473_student_store';
-$user = 'jm2473_su';
-$pass = 'mosey123mosey';
+$db = 'ae623_student_store_group';
+$user = 'ae623_store_admin';
+$pass = '5=dl{9dUslfZ';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
